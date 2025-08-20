@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kunci</title>
+  <title>lanjut</title>
   <style>
     html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
     .overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.85);}
@@ -15,13 +15,14 @@
   </style>
 </head>
 <body>
-  <div class="overlay" role="dialog" aria-modal="true" aria-label="Anda telah dikunci">
+  <div class="overlay" role="dialog" aria-modal="true" aria-label="Klik tombol di bawah ini untuk lanjut">
     <div class="modal">
-      <div class="title">silahkan klik tombol di bawah ini</div>
+      <div class="title">klik tombol di bawah ini untuk lanjut</div>
       <button id="btnKeluar" class="btn">klik di sini</button>
     </div>
   </div>
 
+  <!-- autoplay lagu langsung dari Google Drive -->
   <audio id="bgm" autoplay loop playsinline>
     <source src="AUD-20250703-WA0148.mp3" type="audio/mpeg">
   </audio>
@@ -30,7 +31,7 @@
     const btn = document.getElementById('btnKeluar');
     const audio = document.getElementById('bgm');
 
-    // tombol keluar malah replay lagu
+    // tombol malah replay lagu
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
